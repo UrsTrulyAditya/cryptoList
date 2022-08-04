@@ -1,13 +1,11 @@
 const express=require("express");
-require('dotenv').config();
 const app=express();
 const mongoose=require("mongoose");
 const SavedData=require("./model");
-const DB= process.env.DATABASE
-const port= process.env.PORT || 5000;
+
 app.use(express.json());
 
-mongoose.connect(DB).then(()=>
+mongoose.connect('mongodb+srv://adityaDb:adityaDb@cluster0.cxw58eg.mongodb.net/?retryWrites=true&w=majority').then(()=>
     console.log("DB connected")).catch(error=>console.log(error))
  
 app.post('/savedata',async(req,res)=>{
@@ -48,13 +46,10 @@ app.get('/data',async (req,res)=>{
     }
 })
 
- 
 
-
-app.get('/',(req,res)=>{
-    res.send("server started");
-    console.log("server started");
+app.get('/',async (req,res)=>{
+    res.send("hello world")
 })
-app.listen(port,(req,res)=>{
+app.listen(5000,(req,res)=>{
     
     console.log("Server running... ")})
