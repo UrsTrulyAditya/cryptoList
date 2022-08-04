@@ -1,0 +1,12 @@
+.navbar{
+    background-color: rgba(27, 45, 94, 0.918);
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.logo{
+    width: 130px;
+    padding-left: 25px;
+}
