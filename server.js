@@ -48,9 +48,12 @@ app.get('/data',async (req,res)=>{
     }
 })
 
+ 
+
 
 app.get('/',(req,res)=>{
-    res.json("hello world")
+    res.send("server started");
+    console.log("server started");
 })
 app.listen(port,(req,res)=>{
     
