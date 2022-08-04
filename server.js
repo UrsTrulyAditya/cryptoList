@@ -49,9 +49,9 @@ app.get('/data',async (req,res)=>{
 })
 
 
-app.get('/',async (req,res)=>{
-    res.send("hello world")
+app.get('/',(req,res)=>{
+    res.json("hello world")
 })
-app.listen(5000,(req,res)=>{
+app.listen(port,(req,res)=>{
     
     console.log("Server running... ")})
