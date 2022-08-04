@@ -1,8 +1,9 @@
-import React from 'react'
+import React from 'react';
 
 const HeroCard = () => {
   return (
     <div className="mainBox">
+      
         <div className='logoBox'>
             <div className='imageBox'>
                 <h1>GOOGL</h1>
@@ -32,3 +33,7 @@ const HeroCard = () => {
 }
 
 export default HeroCard
+
+
+
+ 
