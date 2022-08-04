@@ -1,11 +1,13 @@
 const express=require("express");
+require('dotenv').config();
 const app=express();
 const mongoose=require("mongoose");
 const SavedData=require("./model");
-
+const DB= process.env.DATABASE
+const port= process.env.PORT || 5000;
 app.use(express.json());
 
-mongoose.connect('mongodb+srv://adityaDb:adityaDb@cluster0.cxw58eg.mongodb.net/?retryWrites=true&w=majority').then(()=>
+mongoose.connect(DB).then(()=>
     console.log("DB connected")).catch(error=>console.log(error))
  
 app.post('/savedata',async(req,res)=>{
